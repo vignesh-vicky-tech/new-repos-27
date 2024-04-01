@@ -1,0 +1,15 @@
+---
+apiVersion: compositions.io/v1alpha1
+kind: InstanceClaim
+metadata:
+  name: "aws-ec2"
+spec:
+  parameters:
+    region: "us-east-1"
+    ami: "ami-06aa3f7caf3a30282"
+    instanceType: "t2.small"
+    keyName: "argokeys"
+    Name: "aws-ec2"
+
+  compositionRef:
+    name: ec2-instance
